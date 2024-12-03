@@ -1,0 +1,328 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+  }
+  
+  /* Navbar */
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 98%;
+    background-color: #6f4e37; /* Coffee brown */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar.scrolled {
+    background-color: #4e3626; /* Darker coffee brown */
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .nav-links li {
+    padding: 4px 10px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #f0c987; /* Light coffee color */
+    transform: scale(1.1);
+  }
+  
+  /* Logo */
+  .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  /* Section Styling */
+  section {
+    padding: 90px 20px;
+    height: 100vh;
+  }
+  
+  /* Section Background Colors */
+  #home {
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), 
+                url('./images/cozy.webp') center/cover no-repeat;
+    color: #6f4e37;
+    text-align: center;
+    padding: 100px 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #about, #services, #menu, #contact {
+    background-color: #eae7e3;
+    color: #4e3626;
+  }
+  
+  /* Home Section */
+  #home h1 {
+    font-size: 3em;
+    margin: 0;
+  }
+  
+  #home p {
+    font-size: 1.2em;
+    margin-top: 20px;
+  }
+  
+  /* About Section */
+  #about {
+    position: relative;
+    color: #ffffff; /* Text color for readability */
+    padding: 100px 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  
+    /* Background image with transparency */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('./images/about.webp') center/cover no-repeat;
+  }
+  
+  #about h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow for better readability */
+  }
+  
+  #about p {
+    font-size: 1.2em;
+    max-width: 800px;
+    line-height: 1.6;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Shadow for better readability */
+  }
+  
+  
+  /* Services Section */
+  #services {
+    background-color: #f7f4f0;
+    padding-top: 50px;
+  }
+  
+  #services h1 {
+    font-size: 2.5em;
+    text-align: center;
+    color: #6f4e37;
+  }
+  
+  #services p {
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 20px;
+  }
+  
+  .service-items {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    margin-top: 20px;
+  }
+  
+  .service-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 30%;
+    min-width: 250px;
+  }
+  
+  .service-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .service-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .service-item h2 {
+    font-size: 1.5em;
+    margin-top: 10px;
+  }
+  
+  .service-item p {
+    margin: 10px 0;
+  }
+  
+  .service-item button {
+    background-color: #6f4e37;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .service-item button:hover {
+    background-color: #4e3626;
+  }
+  
+  /* Menu Section */
+  #menu {
+    padding-top: 50px;
+    background-color: #fff8e1; /* Light yellow background for the menu */
+  }
+  
+  #menu h2 {
+    font-size: 2.5em;
+    text-align: center;
+    color: #6f4e37; /* Coffee brown */
+  }
+  
+  #menu p {
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 20px;
+  }
+  
+  /* Menu Items Styling */
+  .menu-items {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .menu-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 30%;
+    min-width: 250px;
+  }
+  
+  .menu-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .menu-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .menu-item h3 {
+    font-size: 1.8em;
+    margin-top: 10px;
+  }
+  
+  .menu-item p {
+    margin: 10px 0;
+  }
+  
+  .menu-item button {
+    background-color: #6f4e37;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .menu-item button:hover {
+    background-color: #4e3626;
+  }
+  
+  /* Contact Section */
+  #contact {
+    padding-top: 1100px;
+
+  }
+  
+  #contact h2 {
+    font-size: 2.5em;
+    text-align: center;
+  }
+  
+  #contact p {
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 20px;
+  }
+  
+  /* Smooth Scrolling (Optional) */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Scroll-to-Top Button (Optional) */
+  .scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #6f4e37;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5em;
+    display: none;
+    z-index: 1001;
+  }
+  
+  .scroll-to-top:hover {
+    background-color: #4e3626;
+  }
+  
+  /* Ensure the menu section is responsive */
+  @media (max-width: 768px) {
+    .menu-items {
+      flex-direction: column;
+      align-items: center;
+    }
+    .menu-item {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+  
+    .service-items {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .service-item {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+  }
+  
